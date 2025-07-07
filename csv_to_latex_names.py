@@ -1,3 +1,15 @@
+### This script reads a CSV file of names, normalizes them, removes duplicates,
+### and writes them to a LaTeX file for typesetting. It also handles discarded names
+### that were duplicates or had issues.
+
+### csv_to_latex_names.py
+### vibe-coded by Christian Schaffner on 7 July 2025, with plenty of help from ChatGPT 4.1
+
+### prompts: 
+# 1. Create a python script that reads in the tqc-25-users-external-revs.csv file, only keep given_name and family_name, discard double entries. Then create a compilable latex file with a double column list of all names sorted according to family_name.
+# 2. output the names that you discard as doubles. Make sure you get rid of duplicates which are only differing in accents.
+# 3. there are still some sorting issues. Names like "de Wolf" or "van den Berg" should be sorted according to their last word, ignoring the middle words. Last names starting with an accent character should be sorted according to the character without the accent. And single last names should be capitalized.
+
 
 import csv
 import unicodedata
